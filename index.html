@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>TripHack | Stop Overpaying for Travel</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#f9f6f5",
+        "surface-container": "#eae7e7",
+        "surface-container-low": "#f3f0ef",
+        "surface-container-high": "#e5e2e1",
+        "surface-container-lowest": "#ffffff",
+        "surface-dim": "#d6d4d3",
+        "on-surface": "#2f2e2e",
+        "on-surface-variant": "#5c5b5b",
+        "primary": "#0052d0",
+        "primary-container": "#799dff",
+        "primary-fixed": "#799dff",
+        "on-primary": "#f1f2ff",
+        "outline": "#787676",
+        "outline-variant": "#afacac",
+        "tertiary": "#8d3a8b",
+        "tertiary-container": "#f797f0",
+        "on-tertiary-fixed-variant": "#6c1a6c",
+        "emerald": "#1A7756",
+        "inverse-surface": "#0e0e0e",
+      },
+      fontFamily: {
+        headline: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        body: ["Manrope", "system-ui", "sans-serif"],
+      },
+    },
+  },
+}
+</script>
+<style>
+  body { font-family: 'Manrope', sans-serif; background-color: #f9f6f5; color: #2f2e2e; }
+  .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+  @keyframes confettiFall { 0% { transform:translateY(0) rotate(0); opacity:1; } 100% { transform:translateY(100vh) rotate(720deg); opacity:0; } }
+  @keyframes flyPlane {
+    0%   { transform: translate(-10vw, 90vh) scale(0.7); opacity: 0; }
+    10%  { opacity: 0.10; }
+    50%  { transform: translate(45vw, 30vh) scale(1); opacity: 0.10; }
+    90%  { opacity: 0.10; }
+    100% { transform: translate(105vw, -20vh) scale(0.8); opacity: 0; }
+  }
+  .plane-fly {
+    position: fixed; top: 0; left: 0; z-index: 1;
+    pointer-events: none;
+    animation: flyPlane 22s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+  .anim-up { animation: fadeUp 0.55s cubic-bezier(0.16,1,0.3,1) both; }
+  .pressable { cursor:pointer; }
+  .pressable:active { transform:scale(0.97) !important; }
+  ::-webkit-scrollbar { width:0; }
+</style>
+  <script type="module" crossorigin src="/Travel/assets/index-CD21M2jh.js"></script>
+  <link rel="stylesheet" crossorigin href="/Travel/assets/index-x1XGuNl0.css">
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-surface">
+<div id="root"></div>
+</body>
+</html>
